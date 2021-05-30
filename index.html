@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Veloc</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link href="fontawesome/css/all.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+
+    <!--map-->
+</head>
+
+<body>
+    <header>
+        <div class="divlogo">
+            <img src="images/logoo.png" alt="Logo" class="logo">
+        </div>
+
+        <div>
+            <input type="checkbox" id="chk">
+            <label for="chk" class="menu-btn">
+                <i class="fa fa-bars"></i>
+            </label>
+
+
+            <nav class="menu">
+                <ul>
+                    <li>
+                        <a href="#accueil">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="#carte">Carte des vélos</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="accueil">
+        <div class="divslider">
+            <img src="images/diapo1.jpg" class="imgslider img1" alt="mer">
+            <img src='images/diapo2.jpg' class="imgslider" alt="route">
+            <img src='images/diapo3.jpg' class="imgslider" alt="ville de Toulouse">
+
+            <div class="fleches">
+                <i class="fleche_gauche fas fa-arrow-left" id="diapoprécédente"></i>
+                <i class="fleche fas fa-pause" id="pause"></i>
+                <i class="fleche fas fa-play" id="play"></i>
+                <i class="fleche_droite fas fa-arrow-right" id="diaposuivante"></i>
+            </div>
+        </div>
+
+        <div id="carte">
+            <div id="mapid">
+            </div>
+
+            <div class="form_reservation" id="form">
+                <h2 class="titre_station">Information de la station</h2>
+                <div class="informations">
+                    <label for="nom_station">Nom :</label>
+                    <input type="text" id="name_value" name="nom_station">
+                    <span id="name"></span>
+                </div>
+
+                <div class="informations">
+                    <label for="address_station">Adresse :</label>
+                    <input type="text" id="address_station" name="address_station">
+                    <span id="address_value"></span>
+                </div>
+
+                <div class="informations">
+                    <label for="available_bikes">Vélos disponibles:</label>
+                    <input type="text" id="available_bikes" name="available_bikes">
+                    <span id="bike_value"></span>
+                </div>
+
+                <div class="informations">
+                    <label for="status">Statut :</label>
+                    <input type="text" id="statut" name="status">
+                    <span id="statut_value"></span>
+                </div>
+
+                <form id="reservation">
+                    <h2 class="titre_reservation">Formulaire de réservation</h2>
+
+                    <div class="champs">
+                        <label for="nom">Nom :</label>
+                        <input type="text" id="nom" name="nom" value="" required>
+
+                        <div class="champs">
+                            <label for="prenom">Prénom :</label>
+                            <input type="text" id="prenom" name="prenom" value="" required>
+                        </div>
+                    </div>
+
+                    <div class="boutons_canvas">
+                        <button id="signer">Réserver</button>
+                        <button id="bt-clear">Effacer</button>
+                    </div>
+
+                    <div id="canvas">
+                    </div>
+                    <canvas id="myPics">
+                    </canvas>
+
+                    <div class="bouton">
+                        <!-- <a href="#espacecompteur" id="btn_confirmer">Confirmer la réservation</a> -->
+                        <!-- lien qui renvoie vers l'encre(espacecompteur) -->
+                        <div id="btn_confirmer">Confirmer la réservation</div>
+                    </div>
+
+
+
+                    <p id="msg_signature_nonvalidee" style="display: none;">
+                    </p>
+
+                </form>
+            </div>
+
+        </div>
+
+
+        <footer>
+            <div id="footer">
+                <p id="msg_velo_reserve"></p>
+                <div id="compteur">
+                    <div id="texte_compteur">
+                        <p class="msg_temps">Temps restant:</p>
+                        <div id="espacecompteur"></div>
+                    </div>
+                </div>
+            </div>
+
+            <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+                integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+                crossorigin=""></script>
+            <script src="js/compteur_objet.js"></script>
+            <script src="js/slider.js"></script>
+            <script src="js/station.js"></script>
+            <script src="js/mapobjet.js"></script>
+            <script src="js/canvasobjet.js"></script>
+            <script src="js/main.js"></script>
+        </footer>
+</body>
+
+</html>

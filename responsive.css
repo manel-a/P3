@@ -1,0 +1,202 @@
+@media (max-width: 1200px) {
+
+
+    #carte {
+            display: flex;
+            flex-direction: column;
+    }
+
+
+    #mapid {
+    width: 100%;
+    }
+    /* fleche et pause */
+    /* #diaposuivante .fas {
+        position: absolute;
+        color: #6415fe;
+        font-size: 30px;
+        cursor: pointer;
+        top: 50%;
+        right: -285px;
+    }
+    
+    #diapoprécédente .fas {
+        position: absolute;
+        top: -285px;
+        left: 300px;
+        color:#6415fe;
+        font-size: 30px;
+        cursor: pointer;
+        display: block;
+    } */
+    
+}
+
+
+
+
+@media screen and (max-width: 768px){
+
+    .imgslider {
+        height: 100%;
+    }
+
+.divlogo img {
+      width: 240px;
+      top: 2px;
+      position: relative;
+}
+
+
+#canvas {
+    display: flex;
+    flex-direction: column;
+}
+
+.fleches{
+    bottom: 220px;
+    position: relative;
+}
+ 
+/* .form_reservation {
+    padding: 10px;
+    height: 575px;
+} */
+
+/* #myPics {
+    right: 57px;
+    top: 71%;
+} */
+.fleche_gauche {
+
+    left: -70px;
+    position: relative;
+
+}
+
+
+.fleche_droite {
+    position: relative;
+    right: -70px;
+}
+
+}
+
+@media (max-width: 655px){
+    .fleches {
+        bottom: 200px;
+        position: relative;
+    }
+#footer {
+    display: flex;
+    flex-direction: column;
+}
+
+#msg_velo_reserve {
+text-align: center;
+}
+
+ul li {
+    margin-right: -40px;
+}
+
+}
+
+@media screen and (max-width: 574px){
+
+    #btn_confirmer {
+        position: absolute;
+        top : 520px;
+    }
+    
+    .form_reservation {
+        padding: 10px;
+        height: 575px;
+        border-radius: 7%;
+        position: relative;
+        right: 0;
+    }
+
+    #myPics {
+        display: none;
+        border: solid 3px #5c1dd7;
+        position: absolute;
+        border-radius: 13%;
+        right: 57px;
+        top: 370px;
+        background-color: #34d0ffcc;
+    }
+    
+    .divlogo img {
+        position: relative;
+        top: 1px;
+        left: -29px;
+  }
+
+    .menu-btn {
+        display: block;
+        cursor: pointer;
+        font-size: 40px;
+    }
+
+    #chk {
+        display: none;
+    }
+
+    nav.menu {
+        position: absolute;
+        right: 0;
+        height: 0; /* Pour cacher un element et faire une animation*/
+        overflow: hidden; /* Pour cacher un element et faire une animation*/
+        /*transition: height .4s ease; /* Pour faire une animation sur height*/
+    }
+
+    #chk:checked ~ nav.menu {
+        display: block;
+        height: 120px;
+        z-index: 1;
+        position: absolute;
+        top: 94px;
+    }
+
+    /* --------menu bleu------- */
+    nav ul {
+        display: block;
+    }
+
+    nav ul li {
+        display: block;
+        background-color: #1aa8dbb6;
+        border-top: 1px solid white;
+    }
+
+    nav ul li a {
+    display: block;
+    padding: 19px;
+    text-align: center;
+    color: black;
+}
+
+    #mapid {
+        height: 420px;
+        width: 100%;
+    }
+    .fleches {
+        bottom: 150px;
+        position: relative;
+    }
+    
+    /* .fleche_gauche {
+    
+        left: -70px;
+        position: relative;
+    
+    }
+    
+    .fleche_droite {
+        position: relative;
+        right: -70px;
+    } */
+ 
+
+}
